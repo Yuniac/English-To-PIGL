@@ -1,10 +1,11 @@
 import react from "react";
 
-function CopyButton({ text }) {
+function CopyButton({ text, canCopy }) {
+	console.log(text, canCopy);
 	const [copyNotificationState, setCopyNotificationState] = react.useState(false);
 	const copyButton = react.useRef(null);
 	function handleTextCopy() {
-		if (text.length) {
+		if (canCopy) {
 			setCopyNotificationState(true);
 			navigator.clipboard.writeText(text);
 			setTimeout(() => {
@@ -16,6 +17,7 @@ function CopyButton({ text }) {
 				copyButton.current.style.border = "";
 			}, 2000);
 		}
+		console.log(text, canCopy);
 	}
 	return (
 		<div style={{ position: "absolute", right: "32px", bottom: 0 }}>

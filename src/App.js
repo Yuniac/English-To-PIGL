@@ -48,10 +48,11 @@ function App() {
 		}
 		anArrayOfconvertedWordsAsTheResult = anArrayOfconvertedWordsAsTheResult.join(" ");
 		setResult(anArrayOfconvertedWordsAsTheResult);
-		// setCopyingState((oldState) => (oldState = !oldState));
-		setCopyingState(false);
+		// make it so that the user can copy the output;
+		setCopyingState(true);
 	}
 	function updateUserInput(e) {
+		// if nothing is entered;
 		if (e.target.value === null || e.target.value === "") {
 			setUserInput("");
 			setCopyingState(false);
@@ -91,7 +92,7 @@ function App() {
 						</div>
 						<div className="user-result">
 							<textarea value={result} readOnly></textarea>
-							<CopyButton text={result} />
+							<CopyButton text={result} canCopy={copyingState} />
 						</div>
 					</div>
 				</div>
