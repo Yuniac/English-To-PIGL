@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+*,
+*::after,
+*::backdrop {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+html,
+body {
+	width: 100%;
+}
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	/* background-color: #9b59b6; */
+	color: #4be2ff;
+}
+.App {
+	width: clamp(449px, 60%, 1440px);
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+	margin: 1.2rem 0;
+	font-size: 3rem;
+	text-decoration: underline;
+}
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.app-head {
+	display: flex;
+	justify-content: space-between;
+}
+.app-head h2 {
+	text-align: center;
+	margin: 4rem 15rem 1rem;
+	width: 10rem;
+	font-size: 2.5rem;
+}
+.app-body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.app-body textarea {
+	resize: none;
+	border: none;
+	background-color: lightgrey;
+	margin: 0 2rem;
+	height: 250px;
+	width: 500px;
+	font-size: 2rem;
+}
+.app-body .user-result {
+	position: relative;
+}
+.app-body textarea:focus {
+	border: 1px solid #4be2ff;
+}
+
+.app-body textarea::placeholder {
+	font-size: 2rem;
+}
+/* the arrow */
+svg {
+	transition: all 1s ease;
+	transform: rotate(180deg);
+}
+svg:hover,
+svg:focus {
+	cursor: pointer;
+	transform: rotate(360deg);
+}
+
+.app-body .warn-user-empty-input {
+	border: 2px solid crimson;
+}
+.app-body .warn-user-paragraph {
+	position: relative;
+	right: -32px;
+	top: 16px;
+	font-size: 1.2rem;
+	color: lime;
+	visibility: hidden;
+}
+
+/*  */
+.usage-notes-heading {
+	text-align: left;
+	margin-top: 2rem;
+	font-size: 1.5rem;
+}
+.usage-note-list {
+	list-style: none;
+}
+.usage-note-list li {
+	margin: 1rem 0;
+	position: relative;
+}
+.usage-note-list li::before {
+	content: "-";
+	position: absolute;
+	left: -5px;
+	top: 0;
+}
+/*  */
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+footer p:last-of-type {
+	font-size: 2rem;
+	margin-top: 1rem;
+}
