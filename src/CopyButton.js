@@ -1,7 +1,6 @@
 import react from "react";
 
 function CopyButton({ text, canCopy }) {
-	console.log(text, canCopy);
 	const [copyNotificationState, setCopyNotificationState] = react.useState(false);
 	const copyButton = react.useRef(null);
 	function handleTextCopy() {
@@ -17,7 +16,6 @@ function CopyButton({ text, canCopy }) {
 				copyButton.current.style.border = "";
 			}, 2000);
 		}
-		console.log(text, canCopy);
 	}
 	return (
 		<div style={{ position: "absolute", right: "32px", bottom: 0 }}>
