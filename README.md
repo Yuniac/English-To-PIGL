@@ -1,6 +1,6 @@
 # English-To-PIGL
 
-Pig Latin To English
+English To Pig Latin 
 
 ## What it can do?
 
