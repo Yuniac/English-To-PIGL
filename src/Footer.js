@@ -7,7 +7,10 @@ function Footer() {
 				variety of text to convert.
 			</p>
 			<p>
-				This app was made by <a href="https://github.com/Yuniac">Yuniac</a>
+				The source code for this app can be found{" "}
+				<a href="https://github.com/Yuniac/English-To-PIGL" target="_blank">
+					here
+				</a>
 			</p>
 		</footer>
 	);
